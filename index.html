@@ -1,30 +1,44 @@
 <!doctype html><html lang="vi"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#fbfaf7"><title>Toán 12 — Học, hỏi và luyện</title>
+<meta name="theme-color" content="#fbfaf7"><title>Luyện tập thêm — Toán 12</title>
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/css/style.css">
-<script defer src="/assets/js/common.js"></script></head>
+<script defer src="/assets/js/common.js"></script><script defer src="/assets/js/practice.js"></script></head>
 <body><header class="site-header"><div class="shell nav">
 <a class="brand" href="/"><span class="brand-icon">📖</span><span>Toán 12<small>học nhẹ nhàng · tiến vững vàng</small></span></a>
 <nav class="nav-links" aria-label="Điều hướng"><a data-nav href="/">Trang chủ</a><a data-nav href="/gui-bai">Gửi bài</a><a data-nav href="/giai-dap">Bài tập & Giải đáp</a><a data-nav href="/luyen-tap">Luyện tập thêm</a></nav>
 </div></header><main><div class="shell">
-<section class="home-hero">
-<div><span class="pill">✨ Chào mừng đến với góc học Toán 12</span>
-<h1>Không chỉ là bài tập.<br>Là một chỗ để học dễ thở hơn.</h1>
-<p>Tổng hợp bài tập, lời giải chi tiết, gợi ý từng bước, luyện tập tự chấm và nơi gửi bài cần hỏi bằng Google Drive.</p>
-<div class="actions"><a class="btn btn-primary" href="/giai-dap">📘 Bắt đầu học</a><a class="btn btn-sage" href="/luyen-tap">✓ Luyện tập ngay</a><a class="btn btn-ghost" href="/gui-bai">↗ Gửi bài cần hỏi</a></div>
-<div class="decor-stars"><span class="star one"></span><span class="star two"></span><span class="star three"></span></div></div>
-<div class="hero-image"><img src="/assets/images/hero-learning.png" alt="Minh họa góc học Toán 12"></div>
+<div class="section-head"><div><h2>Bài tập luyện tập thêm</h2><p>Trắc nghiệm + điền đáp án, chấm tự động.</p></div><a href="/">← Trang chủ</a></div>
+<div class="grid-2">
+<section class="card">
+<!-- Chỉ cần copy block .quiz và đổi data-answer để thêm câu mới -->
+<div class="quiz" data-type="mcq" data-answer="B">
+  <h3>Câu 1 · Trắc nghiệm</h3>
+  <p>Nếu f′(x) &gt; 0 trên một khoảng thì hàm số:</p>
+  <label class="option"><input type="radio" name="q1" value="A"> A. Nghịch biến</label>
+  <label class="option"><input type="radio" name="q1" value="B"> B. Đồng biến</label>
+  <label class="option"><input type="radio" name="q1" value="C"> C. Không đổi</label>
+  <label class="option"><input type="radio" name="q1" value="D"> D. Không xác định</label>
+  <div class="explain">Đáp án B: f′(x) &gt; 0 thì hàm số đồng biến trên khoảng đó.</div>
+</div>
+<div class="quiz" data-type="number" data-answer="7" data-tolerance="0">
+  <h3>Câu 2 · Điền đáp án</h3>
+  <p>Hàm số y=(2x+m)/(x+1) có GTNN trên [0;4] bằng 3. Tìm m.</p>
+  <input class="answer-input" placeholder="Nhập đáp án">
+  <div class="explain">Đáp án: m=7.</div>
+</div>
+<div class="quiz" data-type="number" data-answer="106" data-tolerance="0">
+  <h3>Câu 3 · Điền đáp án</h3>
+  <p>75√2 xấp xỉ bao nhiêu mét? Làm tròn đến hàng đơn vị.</p>
+  <input class="answer-input" placeholder="Nhập số">
+  <div class="explain">Đáp án: 106 m.</div>
+</div>
+<div class="actions"><button class="btn btn-primary" onclick="gradeQuiz()">Nộp bài</button><button class="btn btn-ghost" onclick="resetQuiz()">Làm lại</button></div>
+<div id="result" class="result"></div>
 </section>
-<div class="mini-stats"><div class="mini-stat"><b>15+</b><span>bài đang có</span></div><div class="mini-stat"><b>3</b><span>khu vực chính</span></div><div class="mini-stat"><b>Tự chấm</b><span>trắc nghiệm + điền đáp án</span></div><div class="mini-stat"><b>Drive</b><span>gửi bài cần hỏi</span></div></div>
-<div class="section-head"><div><h2>Bạn muốn làm gì hôm nay?</h2><p>Chọn một khu vực để bắt đầu.</p></div></div>
-<section class="grid-3">
-<a class="card feature send" href="/gui-bai"><div class="iconbox peach">✈</div><h3>Gửi bài / Hỏi bài</h3><p class="muted">Gửi câu hỏi, bài tập hoặc thắc mắc kèm link Google Drive để tiện xem tài liệu.</p><span class="arrow-go">→</span></a>
-<a class="card feature qa" href="/giai-dap"><div class="iconbox blue">📘</div><h3>Bài tập tương tác - Giải đáp</h3><p class="muted">Xem đề, gợi ý, lời giải, bảng biến thiên và phần kiến thức SGK.</p><span class="arrow-go">→</span></a>
-<a class="card feature practice" href="/luyen-tap"><div class="iconbox sage">📊</div><h3>Luyện tập thêm</h3><p class="muted">Làm bài trắc nghiệm và điền đáp án, sau đó chấm điểm tự động.</p><span class="arrow-go">→</span></a>
-</section>
-<section class="graphic-strip">
-<div class="doodle-card"><div class="doodle-grid"></div><div class="doodle-content"><span class="pill">Chương I</span><h2>Hàm số · Đạo hàm · Cực trị</h2><p class="muted">Bộ bài bạn đã làm trước đó đã được gắn thẳng vào website.</p><div class="math-doodle">f′(x) &gt; 0 &nbsp; → &nbsp; đồng biến</div><div class="math-doodle" style="margin-top:10px">P(x) = R(x) − C(x)</div><div class="actions"><a class="btn btn-soft" href="/giai-dap/chuong-1.html">Mở Chương I →</a></div></div></div>
-<div class="study-note"><span class="tape"></span><div style="margin-top:15px"><div class="iconbox pink">💡</div><h3>Mẹo học</h3><p class="muted">Đừng mở đáp án ngay. Xem gợi ý trước, tự làm một bước rồi mới kiểm tra lời giải.</p><div class="pill" style="background:var(--pink-soft);color:#9a5f78;border-color:#f0d3df">tiến bộ mỗi ngày ♡</div></div></div>
-</section>
-</div></main><footer class="footer"><div class="shell footer-row"><span>Toán 12 · học · hỏi · luyện</span><span>HTML · GitHub · Vercel</span></div></footer></body></html>
+<aside class="card">
+  <div class="iconbox sage">+</div><h3>Tự thêm câu bằng HTML</h3>
+  <p class="muted">Copy một block <code>.quiz</code> và đổi <code>data-answer</code>. Không cần sửa JavaScript.</p>
+  <div class="dev-note"><code>&lt;div class="quiz" data-type="mcq" data-answer="B"&gt;</code><br>... nội dung câu hỏi ...<br><code>&lt;/div&gt;</code></div>
+</aside>
+</div></div></main><footer class="footer"><div class="shell footer-row"><span>Toán 12 · học · hỏi · luyện</span><span>HTML · GitHub · Vercel</span></div></footer></body></html>
