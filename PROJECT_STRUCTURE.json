@@ -1,0 +1,13 @@
+{
+  "upload_all_these_files": [
+    "index.html",
+    "404.html",
+    "vercel.json",
+    "README.md",
+    ".gitignore",
+    "assets/",
+    "gui-bai/",
+    "giai-dap/",
+    "luyen-tap/"
+  ]
+}
